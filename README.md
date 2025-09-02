@@ -10,3 +10,4 @@ Aqui vamos publicar o nosso site e futuras atualizações.
 
 ## 🌐 Acesso ao site
 Assim que ativarmos o GitHub Pages, o site ficará disponível em:
+https://github.com/turing1On/turingon-site/tree/main
