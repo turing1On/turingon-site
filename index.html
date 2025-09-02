@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turing On - Agência Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --laranja: #FF6600;
+      --azul-escuro: #001F3F;
+      --azul-claro: #0074D9;
+      --preto-suave: #1C1C1C;
+      --cinza-claro: #F2F2F2;
+      --branco: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--preto-suave);
+      line-height: 1.6;
+      background: var(--branco);
+    }
+    html { scroll-behavior: smooth; }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: var(--azul-escuro);
+      color: var(--branco);
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .logo span { color: var(--laranja); }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active { color: var(--laranja); }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, var(--azul-escuro), var(--preto-suave));
+      color: var(--branco);
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: var(--laranja);
+      color: var(--branco);
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #e65500; }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      background: var(--cinza-claro);
+      padding: 2rem;
+    }
+    .stat {
+      background: var(--branco);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+    }
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--laranja);
+      margin-bottom: 0.5rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--azul-escuro);
+    }
+    section p { margin-bottom: 1rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* REVEAL EFFECT */
+    .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .stats { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo">Turing <span>On</span></div>
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="active">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>A próxima geração do digital começa aqui</h1>
+    <p>Transformamos ideias em resultados visuais. Marketing digital, identidade visual e estratégias que funcionam.</p>
+    <a href="#sobre" class="btn">Saber Mais</a>
+  
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat reveal">
+      <h3>+10</h3>
+      <p>Projetos Concluídos</p>
+    </div>
+    <div class="stat reveal">
+      <h3>+30</h3>
+      <p>Clientes Ativos</p>
+    </div>
+    <div class="stat reveal">
+      <h3>+6 Meses</h3>
+      <p>Experiência no Digital</p>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="reveal">
+    <h2>Sobre a Turing On</h2>
+  <p>A Turing On é uma agência angolana especializada em marketing digital, conteúdo criativo e presença online. Fundada por <strong>Celestino Teodoro Quilolo</strong>, nosso objetivo é transformar negócios com inovação visual e estratégias que geram impacto real.</p>
+‎        
+‎            <h2>Conheça o Homem por Trás da Turing On</h2>
+‎            <p>Com uma mente estratégica e um coração criativo, <strong>Celestino Teodoro Quilolo</strong> é o fundador e CEO da <strong>Turing On - Agência de Marketing Digital</strong>. A agência nasceu com o propósito de transformar pequenos negócios através da inovação digital.</p>
+
+‎            <p>Apaixonado por tecnologia, educação e crescimento de pequenos empreendedores, Teodoro acredita que o <strong>futuro do marketing digital está nas mãos de quem ousa criar com o que tem</strong> - mesmo com apenas um telemóvel na mão.</p>
+‎            <div class="hero-image">
+           <img src="ceo.png" alt="Foto do CEO - Celestino Teodoro Quilolo">
+           </div>
+   </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="reveal">
+    <h2>Nossos Serviços</h2>
+    <p>Oferecemos soluções digitais completas:</p>
+    <ul>
+      <li>Design Gráfico (flyers, logotipos, ebooks)</li>
+      <li>Criação de Conteúdo (textos, roteiros, artigos)</li>
+      <li>Gestão de Redes Sociais</li>
+      <li>Marketing e Crescimento (Tráfego Pago)</li>
+      <li>Carteiras Digitais (Cartão Visa)</li>
+      <li>Consultoria Digital</li>
+      <li>Mentorias e Treinamentos</li>
+    </ul>
+  </section>
+
+  <!-- OFERTAS -->
+  <section id="ofertas" class="reveal">
+    <h2>Ofertas Especiais</h2>
+    <ul>
+      <li>Markenting Sem Medo - Imersão digital - <strong>Gratuito</strong><a href="https://chat.whatsapp.com/DFEkKmJGl6TIMnlP54mATc"> Entrar na Sala</a></li>
+      <li>Identidade Visual Profissional com 30% de desconto</li>
+      <li>Landing Page com bônus de mentoria digital</li>
+    </ul>
+   <h2><a href="https://chat.whatsapp.com/BqOiZdICILGCRSVOEsXUIm" target="_blank" class="btn">Ser Cliente VIP</a></h2>
+  </section>
+
+   
+  <!-- CONTACTOS -->
+  <section id="contactos" class="reveal">
+    <h2>Fale Connosco</h2>
+    <p>Email: <a href="mailto:turingon676@gmail.com">turingon676@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/244973693706">Clique aqui</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61576126234114">Turing On - Agência Digital</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Turing On - Agência Digital. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // MENU ATIVO
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // REVEAL EFFECT
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((el) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        }
+      });
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+  </script>
+</body>
+</html>
