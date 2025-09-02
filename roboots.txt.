@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://turing1on.github.io/turingon-site/sitemap.xml
